@@ -1,0 +1,12 @@
+title: TapRoutine
+description: Privacy policy for the TapRoutine Android app.
+url: https://vitoriotaz-boop.github.io
+baseurl: /taproutine-privacy
+lang: pt-BR
+theme: minima
+markdown: kramdown
+kramdown:
+  input: GFM
+exclude:
+  - Gemfile
+  - Gemfile.lock
