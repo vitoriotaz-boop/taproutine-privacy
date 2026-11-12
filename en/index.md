@@ -1,29 +1,38 @@
 ---
 layout: page
-title: TapRoutine Privacy Policy
-lang: en
+title: "TapRoutine Privacy Policy"
+lang: en-US
 permalink: /en/
-description: Privacy and data-use information for TapRoutine for Android.
-eyebrow: Privacy & data use
-brand_label: Privacy
-home_label: TapRoutine privacy policy home
-footer_label: TapRoutine · Android
-contact_label: Contact
+description: "Privacy and data-use information for TapRoutine for Android."
+eyebrow: "Privacy & data use"
+brand_label: "Privacy"
+home_label: "TapRoutine privacy policy home"
+footer_label: "TapRoutine · Android"
+contact_label: "Contact"
 ---
 
-<p class="last-updated">Last updated: November 11, 2026</p>
-<nav class="language-nav" aria-label="Language selection"><a href="{{ '/' | relative_url }}" lang="pt-BR">Português (Brasil)</a><span aria-current="page">English</span><a href="{{ '/es/' | relative_url }}" lang="es">Español</a></nav>
+<p class="last-updated">Last updated: November 12, 2026</p>
+<nav class="language-nav" aria-label="Language selection">
+<a href="{{ '/' | relative_url }}" lang="pt-BR">Português (Brasil)</a>
+<span aria-current="page" lang="en-US">English</span>
+<a href="{{ '/es/' | relative_url }}" lang="es-419">Español</a>
+<a href="{{ '/fr/' | relative_url }}" lang="fr-FR">Français</a>
+<a href="{{ '/de/' | relative_url }}" lang="de-DE">Deutsch</a>
+<a href="{{ '/it/' | relative_url }}" lang="it-IT">Italiano</a>
+<a href="{{ '/ja/' | relative_url }}" lang="ja-JP">日本語</a>
+</nav>
+
 ## About this app version
 
-TapRoutine is an Android preview app that lets a user configure a routine for a selected app, schedule it on the device, run user-defined steps, and check screen points by color. The inspected APK has package identifier `io.github.vitoriotaz.taproutine`, `minSdk` 24, `targetSdk` 36, and `android:allowBackup=true`. The findings in this notice apply to that preview APK and may not apply to future versions.
+TapRoutine is an Android preview app that lets you configure a routine for a selected app, schedule it on the device, run user-defined steps, and check screen points by color. The inspected APK has package identifier `io.github.vitoriotaz.taproutine`, `minSdk` 24, `targetSdk` 36, and `android:allowBackup=true`. The findings in this notice apply to that preview APK and may not apply to future versions.
 
 ## Data the app creates or accesses
 
 - **User routine and settings:** may include the routine name; the selected app’s name and package identifier; times, days, and time zone; steps and gestures (such as taps, swipes, waits, Back, or Home) and their positions; the color, point, and tolerance used for checks; and settings such as check frequency and whether to reopen the target app. Settings may also include Guardian and an alternate screen, with another preconfigured sequence.
-- **Apps available to select:** TapRoutine queries Android to display apps that have a launchable activity. The user selects the target app; its selected name and package identifier are kept in the local routine.
-- **Temporary foreground-window information:** while TapRoutine’s accessibility service is active, it receives Android `TYPE_WINDOW_STATE_CHANGED` events and keeps the package name supplied by the system in memory. The service does not read the interface tree, text, fields, or other screen content.
-- **Local data and logs:** routines and logs may contain times, the target app’s package, step and retry progress/results, technical failure details, and color values, screen points/positions, and screen resolution. `SharedPreferences` also store disclosure-related consent and the states and times of schedules and Guardian.
-- **Temporary capture for a color check:** when checking, the app obtains the entire current screen/display in memory to calculate only the average color of a 3×3 area at the indicated point. Capture may occur during routine checks, alternate-screen detection, and Guardian operation; it is not necessarily limited to the target app or window. The app does not deliberately save the capture to a file. It is transient, and the associated resources are released in the normal flow.
+- **Apps available to select:** TapRoutine queries Android to display apps that have a launchable activity. You select the target app; its name and package identifier are stored in the local routine.
+- **Temporary foreground-window information:** while TapRoutine’s Accessibility Service is active, it receives Android `TYPE_WINDOW_STATE_CHANGED` events and keeps the package name reported by the system in memory. The service does not read the interface tree, text, fields, or other screen content.
+- **Local data and logs:** routines and logs may contain times, the target app’s package, step and retry progress and results, technical failure details, and color values, screen points/positions, and screen resolution. `SharedPreferences` also store consent related to the disclosure and the states and times of schedules and Guardian.
+- **Temporary capture for a color check:** when checking, the app captures the entire current screen in memory to calculate only the average color of a 3×3-pixel area at the indicated point. Capturing the screen for this color check requires Android 11 or later. Capture may occur during routine checks, alternate-screen detection, and Guardian operation; it is not necessarily limited to the target app or window. The app does not deliberately save the capture to a file. It is transient, and the associated resources are released in the normal flow.
 
 ## How the data is used
 
@@ -31,25 +40,26 @@ Data is used on the device to save and load the routine, schedule its execution,
 
 ## Processing, storage, and transmission
 
-Routines and logs are kept in the app’s private local storage. `SharedPreferences` also hold the data described above, including disclosure-related consent and schedule and Guardian states and times. The window package observed by the service is held in memory. Screen capture is transient; the app does not deliberately save it to a file and releases associated resources in the normal flow.
+Routines and logs are kept in the app’s private local storage. `SharedPreferences` also hold the data described above, including consent related to the disclosure and schedule and Guardian states and times. The window package observed by the service is held in memory. Screen capture is transient; the app does not deliberately save it to a file and releases associated resources in the normal flow.
 
-The inspected APK’s code does not implement an account, server, sync, analytics, ads, payments, or app-originated network calls. This does not mean that no copy can leave the device: Android/Google Auto Backup may copy data as described below. The selected target app may also have its own connections and data practices, which TapRoutine does not control.
+The inspected APK’s code does not implement an account, server, synchronization, analytics, ads, payments, or app-originated network calls. This does not mean that no copy can leave the device: Android/Google Auto Backup may copy data as described below. The selected target app may also have its own connections and data practices, which TapRoutine does not control.
 
 If you choose to contact support by email, your message and the address used to send it will be transmitted by your email service so we can receive and reply. This is an external action you initiate, not an app-originated network call by TapRoutine.
 
 ## Android/Google Auto Backup
 
-The inspected preview APK sets `android:allowBackup` to `true`. If Android Auto Backup is enabled, Android may copy the app’s private files and `SharedPreferences`—which may include routines, logs, consent, and schedule/Guardian states and times—to the user’s own Google account/Drive as part of Android’s service. Behavior depends on backup settings, the Android version, and the device.
+The inspected preview APK sets `android:allowBackup` to `true`. If Android Auto Backup is enabled, Android may copy the app’s private files and `SharedPreferences`—which may include routines, logs, consent, and schedule/Guardian states and times—to the user’s Google account/Drive as part of Android’s service. Behavior depends on backup settings, the Android version, and the device.
 
 This backup is an Android/Google service, not a TapRoutine upload to the developer’s server. The app and developer do not have access to the backup copy. Clearing local app data or uninstalling the app should not be understood as a guarantee that a separate copy maintained by the backup service is removed.
 
 ## Retention and your options
 
-The routine and logs remain in the app’s storage until replaced or removed. The prototype’s **Clear** button deletes the execution log. If the log grows very large, the prototype may also trim older entries and keep recent ones. Saving a changed configuration replaces the local routine; canceling the schedule stops scheduled execution but does not by itself delete the saved configuration. To remove the app’s local data, use Android’s app-storage controls to clear the app’s data or uninstall it; this does not guarantee removal of a separate backup copy, if one exists. The operating system may use different labels for these controls.
+The routine and logs remain in the app’s storage until replaced or removed. The prototype’s **Limpar** button (Portuguese for “Clear”) deletes the execution log. If the log grows very large, the prototype may also remove older entries and keep recent ones. Saving a changed configuration replaces the local routine; canceling the schedule stops scheduled execution but does not by itself delete the saved configuration. To remove the app’s local data, use Android’s app-storage controls to clear the app’s data or uninstall it; this does not guarantee removal of a separate backup copy, if one exists. The operating system may use different labels for these controls.
 
 ## Android services and permissions
 
-- **Android Accessibility Service:** must be enabled by the user in system settings to run configured gestures and perform checks. It receives `TYPE_WINDOW_STATE_CHANGED` events and keeps the package supplied by the system in memory; it does not read the interface tree, text, or fields. Transient screen capture is used to calculate the color average described above.
+- **Android Accessibility Service:** must be enabled by you in system settings to run configured gestures and perform checks. It receives `TYPE_WINDOW_STATE_CHANGED` events and keeps the package reported by the system in memory; it does not read the interface tree, text, or fields. Transient screen capture is used to calculate the color average described above.
+
 - **`SCHEDULE_EXACT_ALARM`:** associated with scheduling exact alarms. If Android does not allow exact alarms, scheduling may be less precise and may be delayed.
 - **`RECEIVE_BOOT_COMPLETED`:** lets the module receive a device-restart event so it can handle rescheduling routines.
 - **`WAKE_LOCK`:** allows the device to stay awake during a run that needs to continue in the background.
